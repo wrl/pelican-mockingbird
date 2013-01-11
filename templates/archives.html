@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+{%- if dates %}
+
+                <h1>Archives</h1>
+
+				{#- hold on to your butts! #}
+
+                {% set month = None -%}
+                {%- for article in dates -%}
+                {% set cmonth = article.date.date().replace(day=1) %}
+                {%- if not month -%}
+                {%   set month = cmonth %}
+
+                <h4 class="date">{{ article.date.strftime("%b %Y") }}</h4>
+                <div class="post archives">
+                    <ul>
+                {%- elif cmonth < month -%}
+                {%   set month = cmonth %}
+
+                    </ul>
+                    <br />
+                </div>
+
+                <h4 class="date">{{ article.date.strftime("%b %Y") }}</h4>
+                <div class="post archives">
+                    <ul>
+                {%- endif %}
+
+                        <li>{{ article.date.strftime("%d") }}: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title | truncate(70) }}</a></li>
+                {%- endfor %}
+
+                    </ul>
+                    <br />
+                </div>
+{% else %}
+
+                <div class="post text pinned">
+                    <h2>No Posts</h2>
+                    <p>There aren't any posts in the timeframe specified.</p>
+                </div>
+{% endif %}
+{% endblock %}

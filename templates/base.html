@@ -1,0 +1,58 @@
+{% macro ephemeral_nav_link(what, where, selected=False) -%}
+<li class="ephemeral{%- if selected %} selected{% endif %}"><a href="{{ SITEURL }}/{{ where }}">{{what}}</a></li>
+{%- endmacro -%}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <title>{% block title %}{{ SITENAME }}{% if title %} &middot; ${ title | escape }{% endif %}{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ SITEURL }}/favicon.ico" />
+        {% if FEED_ALL_ATOM -%}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+        {% endif %}
+
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/screen.css" type="text/css" />
+    </head>
+    <body>
+        {% if SITENAME -%}
+        <div id="header">
+            <ul id="nav">
+                {%- block ephemeral_nav %}{%- endblock %}
+
+                <li {%- if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
+                {% for page in PAGES -%}
+                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor -%}
+                <li {%- if output_file == "archives.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/archives.html">Archives</a></li>
+            </ul>
+            <div class="header_box">
+                <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+                {%- if SITESUBTITLE %}
+
+                <h2>{{ SITESUBTITLE }}</h2>
+                {%- endif %}
+
+            </div>
+        </div>
+        {%- endif %}
+
+        <div id="wrapper">
+            <div id="content">
+{%- block content -%}{%- endblock %}
+
+                <div class="clear"></div>
+                <div id="footer">
+                    <p>
+                    Mockingbird theme by <a href="http://nevanscott.com/">Nevan Scott</a>
+                    &middot;
+                    <a class="atom" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Feed</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>
