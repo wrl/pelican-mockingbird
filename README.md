@@ -2,7 +2,9 @@
 this is a port of [Nevan Scott]'s [Mockingbird] theme, originally developed for
 Chyrp.
 
-this thing is still hella in progress you guys, you probably shouldn't use it yet.
+![screenshot][screenshot.png]
+
+this thing is usable-ish now.
 
 ## Authors
 * [Nevan Scott] (original author)
