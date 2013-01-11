@@ -209,9 +209,7 @@ form.inline_edit {
 	}
 #nav li.ephemeral.selected a {
 	background-color: #FFF;
-    border: 0 #000 solid;
-    border-width: 0 1px 1px 1px;
-	color: #444;
+	color: #BBB;
 	}
 
 
