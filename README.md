@@ -1,8 +1,8 @@
+![screenshot](https://raw.github.com/wrl/pelican-mockingbird/master/screenshot.png)
+
 # mockingbird for pelican
 this is a port of [Nevan Scott]'s [Mockingbird] theme, originally developed for
 Chyrp.
-
-![screenshot](https://raw.github.com/wrl/pelican-mockingbird/master/screenshot.png)
 
 this thing is usable-ish now.
 
