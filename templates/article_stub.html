@@ -19,7 +19,7 @@
                         {%- else -%}
                         <a href="{{ SITEURL }}/{{ article.url }}">posted at {{ article.date.strftime("%l:%M %P") }}</a>
                         {%- if article.category.name != "Uncategorized" -%}
-                        &middot; in <a href="{{ SITEURL }}/{{ article.category.url }}" rel="tag">{{ article.category }}</a>
+                        &nbsp;&middot;&nbsp;<a href="{{ SITEURL }}/{{ article.category.url }}" rel="tag">{{ article.category }}</a>
                         {%- endif %}
                         {% if article.tags %}
 
