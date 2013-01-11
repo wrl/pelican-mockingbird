@@ -25,7 +25,7 @@
 
                 <li {%- if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
                 {% for page in PAGES -%}
-                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+				<li {%- if output_file == page.url %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
                 {% endfor -%}
                 <li {%- if output_file == "archives.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/archives.html">Archives</a></li>
             </ul>
