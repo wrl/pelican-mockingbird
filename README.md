@@ -2,7 +2,7 @@
 this is a port of [Nevan Scott]'s [Mockingbird] theme, originally developed for
 Chyrp.
 
-![screenshot](./screenshot.png)
+![screenshot](https://raw.github.com/wrl/pelican-mockingbird/master/screenshot.png)
 
 this thing is usable-ish now.
 
