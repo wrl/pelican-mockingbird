@@ -25,9 +25,12 @@
                 {%- block ephemeral_nav %}{%- endblock %}
 
                 <li {%- if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
+                {% if DISPLAY_PAGES_ON_MENU -%}
                 {% for page in PAGES -%}
-				<li {%- if output_file == page.url %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                <li {%- if output_file == page.url %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
                 {% endfor -%}
+				{% endif -%}
+
                 <li {%- if output_file == "archives.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/archives.html">Archives</a></li>
             </ul>
             <div class="header_box">
