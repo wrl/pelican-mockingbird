@@ -56,19 +56,10 @@ body {
 	color: #444;
 	}
 #header, #wrapper, #controls ul {
-	width: 700px;
+	width: 750px;
 	margin: 0 0 0 185px;
 	padding: 0 20px;
 	}
-#controls{overflow:hidden; *overflow:visible;*zoom:1;}
-#controls {
-	background: #EEE;
-	-webkit-box-shadow: inset 0 -2px 3px rgba(0,0,0,.1);
-	-moz-box-shadow: inset 0 -2px 3px rgba(0,0,0,.1);
-	box-shadow: inset 0 -2px 3px rgba(0,0,0,.1);
-	}
-#controls li { float: left; }
-#controls li a { display: block; margin-right: 20px; line-height: 2em; }
 
 a {
 	text-decoration: none;
@@ -160,6 +151,19 @@ blockquote {
 
 .page {
 	margin: 0 90px;
+	}
+
+div.codehilite {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	}
+
+.post pre, .page pre {
+	padding: .5em;
+	font-size: 12px;
+	font-family: Monospace;
+	line-height: 1.1em;
 	}
 
 form.inline_edit {
@@ -289,16 +293,6 @@ form.inline_edit {
 	}
 #footer a { color: inherit; }
 #footer p { margin: 0; }
-
-.notice {
-	text-align: center;
-	margin: 1.5em 0;
-	background-color: #DDD;
-	color: #000;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	}
 
 .right { float: right; }
 
