@@ -167,6 +167,11 @@ div.codehilite {
 	border-radius: 5px;
 	}
 
+code, pre {
+	font-family: monospace;
+	background-color: rgb(238, 238, 238);
+}
+
 .post pre, .page pre {
 	padding: .5em;
 	font-size: 12px;
