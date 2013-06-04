@@ -3,6 +3,7 @@
    License: none (public domain)
 */
 
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,6 +47,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+@import url("pygment.css");
 
 /* Mockingbird Theme by Nevan Scott nevanscott.com */
 
@@ -166,6 +169,11 @@ div.codehilite {
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	}
+
+code, pre {
+	font-family: monospace;
+	background-color: rgb(238, 238, 238);
+}
 
 .post pre, .page pre {
 	padding: .5em;
