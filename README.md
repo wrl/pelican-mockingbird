@@ -7,8 +7,8 @@ Chyrp.
 this thing is usable-ish now.
 
 ## Authors
-* [Nevan Scott] (original author)
-* [wrl] (port to pelican)
+* [Nevan Scott] (https://github.com/nevanscott)
+* [wrl] (https://github.com/wrl)
 
 ## License
 none specified in the original project, none specified here?????
