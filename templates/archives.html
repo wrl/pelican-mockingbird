@@ -6,19 +6,19 @@
 
                 <h1>Archives</h1>
 
-				{#- hold on to your butts! #}
+                {#- hold on to your butts! #}
 
-                {% set month = None -%}
+                {% set ctx = {'month': None} -%}
                 {%- for article in dates -%}
                 {% set cmonth = article.date.date().replace(day=1) %}
-                {%- if not month -%}
-                {%   set month = cmonth %}
+                {%- if not ctx.month -%}
+                {%   if ctx.update(month=cmonth) %}{% endif %}
 
                 <h4 class="date">{{ article.date.strftime("%b %Y") }}</h4>
                 <div class="post archives">
                     <ul>
-                {%- elif cmonth < month -%}
-                {%   set month = cmonth %}
+                {%- elif cmonth < ctx.month -%}
+                {%   if ctx.update(month=cmonth) %}{% endif %}
 
                     </ul>
                     <br />
