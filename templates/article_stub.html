@@ -17,7 +17,7 @@
                         {% if article.pinned -%}
                         <a href="{{ SITEURL }}/{{ article.url }}">posted {{ article.date.strftime("%B %d, %I:%M %Y") }}</a>
                         {%- else -%}
-                        <a href="{{ SITEURL }}/{{ article.url }}">posted at {{ article.date.strftime("%I:%M %Y") }}</a>
+                        <a href="{{ SITEURL }}/{{ article.url }}">posted at {{ article.date.strftime("%B %d, %I:%M %Y") }}</a>
                         {%- if article.category.name != "Uncategorized" -%}
                         &nbsp;&middot;&nbsp;<a href="{{ SITEURL }}/{{ article.category.url }}" rel="tag">{{ article.category }}</a>
                         {%- endif %}
